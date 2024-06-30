@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body, #root, .App, .pages{
+    width: 100vw;
+    height: 100vh;
+    background: #E3F2FD ;
+    overflow: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #0D47A1 ;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar h1 {
+    padding: 2vh;
+    font-size: 4vh;
+    width: 100%;
+    
+
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a:hover {
+    background-color: #116BEE;
+
+
+}
+nav {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    right: 0;
+}
+nav > div>button, nav > div > span {
+    color: white;
+    background-color: #0D47A1;
+    border: none;
+    margin: 4px;
+    padding: 3px;
+    font-size: 1rem;
+}
+
+nav > div>button:hover {
+    background-color: #116BEE;
+}
+nav > div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+}
+nav > div> a{
+    margin: 4px;
+    padding: 3px;
+}
+
+.todo-list {
+    
+    
+
+
+}
+.list-form{
+    padding: 0.5rem 0.5rem;
+    max-width: 900px;    
+    background-color: #0D47A1;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20vh;
+
+}
+.error-div, .error{
+    display: flex;
+    width: 50%;
+    margin: 0.5rem auto;
+    max-width: 200px;
+
+    justify-content: center;
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    border: black 1px solid;
+    border-radius: 1.5rem;
+}
+ .error{
+    display: flex;
+    width: 100%;
+    margin: 0.5rem auto;
+    max-width: 200px;
+
+    justify-content: center;
+    background-color: red;
+    color: black;
+    border: black 1px solid;
+    border-radius: 1.5rem;
+}
+.form-row {
+    display: flex;
+
+    padding: 5vh 3vw;
+    height: 6vh;
+    max-width: 800px;
+    justify-content: center;
+    background-color: #90CAF9 ;
+    border-radius: 1.5rem;
+}
+
+
+.form-row input {
+    width: 75%;
+    height: auto;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-indent: 1rem;
+}
+.form-row input::placeholder {
+    font-size: 1.5vh;
+}
+
+#addButton {
+    background-color: #007BFF; 
+    border-radius: 2rem;
+    margin-left: 1rem;
+    width: 6rem;
+    font-weight: bold;
+}
+#addButton:hover, .task > button:hover{
+    background-color: #226BEE;
+}
+
+
+
+
+.tasks {
+    width: 65%;
+    max-width: 750px;
+    margin:  auto;
+    
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #90CAF9 ;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2vh 0;
+
+    
+    
+}
+
+.task > button{
+    background-color: #007BFF; 
+    border-radius: 2rem;
+    font-weight: bold;
+    width: 40px;
+    height: 30px;
+    margin-right: -1.5rem;
+
+}
+
+.task p {
+    overflow-wrap: break-word;
+    width:95%;
+    max-width: 95%;
+    font-weight: bold;
+}
+
+.task input {
+    margin-left: -1.5rem;
+    margin-right: 0.5rem;
+}
+
+.signup-div,.login-div{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #90CAF9;
+  border: 5px solid #0D47A1;
+  border-radius: 2px;
+  padding: 80px;
+}
+
+form.login, form.signup {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+
+}
+
+form.login > button, form.signup > button {
+    background-color: #007BFF;
+    border: 2px solid #0D47A1;
+    margin-top: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+h3{
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
