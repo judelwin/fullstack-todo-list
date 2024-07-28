@@ -2,9 +2,16 @@ import express from "express"
 import dotenv from 'dotenv'
 import taskRoutes from "./routes/tasks.js"
 import userRoutes from "./routes/user.js"
-
+import cors from "cors"
 import mongoose from "mongoose"
 dotenv.config()
+
+const corsOptions = {
+  origin: 'https://fullstack-todo-list-eight.vercel.app/', // Replace with your Vercel front-end URL
+  methods: 'GET,PUT,PATCH,POST,DELETE',
+  credentials: true,
+};
+
 
 const app = express()
 // test GET
@@ -12,6 +19,7 @@ app.get('/', (req, res) =>{
     res.json({mssg: 'Welcome to the app'})
 })
 
+app.use(cors(corsOptions))
 
 app.use((req, res, next) => {
     console.log(req.path,req.method)
