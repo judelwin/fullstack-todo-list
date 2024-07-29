@@ -16,7 +16,7 @@ const corsOptions = {
 const app = express()
 // test GET
 app.get('/', (req, res) =>{
-    res.json({mssg: 'Welcome to the app'})
+    res.json({mssg: 'raaaa'})
 })
 
 app.use(cors(corsOptions))
