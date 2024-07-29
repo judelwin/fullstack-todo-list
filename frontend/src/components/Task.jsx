@@ -32,7 +32,7 @@ const Task = ({task}) => {
             newTask.completed = true
             console.log("now true")
         }
-        const response = await fetch('${URL}/api/tasks/' + task._id, {
+        const response = await fetch(`${URL}/api/tasks/` + task._id, {
             method: "PATCH", 
             headers: {
                 'Content-Type': 'application/json',

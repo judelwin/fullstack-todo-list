@@ -10,7 +10,7 @@ const TodoList = () => {
     const {tasks, dispatch} = useTasksContext()
     useEffect(() => {
         const fetchTasks = async () => {
-            const response = await fetch('${URL}/api/tasks', {
+            const response = await fetch(`${URL}/api/tasks`, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
