@@ -6,7 +6,7 @@ const ListForm = () => {
     const [error, setError] = useState(null)
     const { dispatch } = useTasksContext()
     const {user} = useAuthContext()
-    
+    const API_URL = process.env.API_URL
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (!user){
@@ -15,7 +15,7 @@ const ListForm = () => {
         }
         const completed = false
         const task = {completed, description}
-        const response = await fetch('/api/tasks', {
+        const response = await fetch('${API_URL}/api/tasks', {
             method: "POST",
             body: JSON.stringify(task),
             headers: {

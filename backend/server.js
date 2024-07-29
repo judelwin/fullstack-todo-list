@@ -6,6 +6,7 @@ import cors from "cors"
 import mongoose from "mongoose"
 dotenv.config()
 
+const API_URL = process.env.API_URL
 const corsOptions = {
   origin: 'https://fullstack-todo-list-knnto4arg-judelwins-projects.vercel.app', // Replace with your Vercel front-end URL
   methods: 'GET,PUT,PATCH,POST,DELETE',
@@ -27,8 +28,8 @@ app.use((req, res, next) => {
 })
 
 app.use(express.json())
-app.use('/api/tasks',taskRoutes)
-app.use('/api/user', userRoutes)
+app.use('${API_URL}/api/tasks',taskRoutes)
+app.use('${API_URL}/api/user', userRoutes)
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         app.listen(process.env.PORT, () => {

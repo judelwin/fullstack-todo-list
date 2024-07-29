@@ -6,12 +6,12 @@ const Task = ({task}) => {
     const [completed, setCompleted] = useState(task.completed)
     const {user} = useAuthContext()
     useEffect(() => { setCompleted(task.completed); }, [task.completed])
-
+    const API_URL = process.env.API_URL
     const handleDelete = async () =>{
         if (!user){
             return
         }
-        const response = await fetch('/api/tasks/' + task._id, {
+        const response = await fetch('${API_URL}/api/tasks/' + task._id, {
             method: "DELETE",
             headers: {
                 'Authorization': `Bearer ${user.token}`
@@ -32,7 +32,7 @@ const Task = ({task}) => {
             newTask.completed = true
             console.log("now true")
         }
-        const response = await fetch('/api/tasks/' + task._id, {
+        const response = await fetch('${API_URL}/api/tasks/' + task._id, {
             method: "PATCH", 
             headers: {
                 'Content-Type': 'application/json',
