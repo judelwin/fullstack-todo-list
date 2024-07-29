@@ -7,7 +7,7 @@ import { useAuthContext } from "../hooks/useAuthContext.js"
 const TodoList = () => {
     const {user}  = useAuthContext()
     const {tasks, dispatch} = useTasksContext()
-    
+    const API_URL = process.env.REACT_APP_API_URL
     useEffect(() => {
         const fetchTasks = async () => {
             const response = await fetch('${API_URL}/api/tasks', {

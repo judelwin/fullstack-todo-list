@@ -5,7 +5,7 @@ export const useSignup = () => {
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(null)
     const { dispatch} = useAuthContext()
-    const API_URL = process.env.API_URL
+    const API_URL = process.env.REACT_APP_API_URL
     const signup = async (email, password) => {
         setIsLoading(true)
         setError(null)
