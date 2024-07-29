@@ -8,6 +8,7 @@ import Navbar from './components/Navbar.jsx'
 import { useAuthContext } from './hooks/useAuthContext.js'
 function App() {
   const {user} = useAuthContext()
+  
   return (
     <div className="App">
       <BrowserRouter>

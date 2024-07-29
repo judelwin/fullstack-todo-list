@@ -5,12 +5,12 @@ import { useTasksContext} from "../hooks/useTasksContext.js"
 import { useAuthContext } from "../hooks/useAuthContext.js"
 
 const TodoList = () => {
+    const URL = process.env.REACT_APP_API_URL
     const {user}  = useAuthContext()
     const {tasks, dispatch} = useTasksContext()
-    const API_URL = process.env.REACT_APP_API_URL
     useEffect(() => {
         const fetchTasks = async () => {
-            const response = await fetch('${API_URL}/api/tasks', {
+            const response = await fetch('${URL}/api/tasks', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
