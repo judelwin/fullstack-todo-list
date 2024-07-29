@@ -27,8 +27,8 @@ app.use((req, res, next) => {
 })
 
 app.use(express.json())
-app.use('${REACT_APP_API_URL}/api/tasks',taskRoutes)
-app.use('${REACT_APP_API_URL}/api/user', userRoutes)
+app.use('/api/tasks',taskRoutes)
+app.use('/api/user', userRoutes)
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         app.listen(process.env.PORT, () => {

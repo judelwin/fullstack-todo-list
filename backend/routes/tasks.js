@@ -7,17 +7,17 @@ const router = express.Router()
 
 router.use(requireAuth)
 
-router.get('${REACT_APP_API_URL}/', getTasks)
+router.get('/', getTasks)
 
 // GET single task
-router.get('${REACT_APP_API_URL}/:id', getTask)
+router.get('/:id', getTask)
 
 
 // POST a new task
-router.post('${REACT_APP_API_URL}/', createTask)
+router.post('/', createTask)
 // DELETE a task
-router.delete('${REACT_APP_API_URL}/:id', deleteTask)
+router.delete('/:id', deleteTask)
 
 // UPDATE a task
-router.patch('${REACT_APP_API_URL}/:id', updateTask)
+router.patch('/:id', updateTask)
 export default router

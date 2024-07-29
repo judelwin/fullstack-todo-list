@@ -15,7 +15,7 @@ const ListForm = () => {
         }
         const completed = false
         const task = {completed, description}
-        const response = await fetch('${REACT_APP_API_URL}/api/tasks', {
+        const response = await fetch('/api/tasks', {
             method: "POST",
             body: JSON.stringify(task),
             headers: {
