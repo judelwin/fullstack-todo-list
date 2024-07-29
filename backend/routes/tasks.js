@@ -5,7 +5,7 @@ import requireAuth from "../middleware/requireAuth.js"
 const router = express.Router()
 // GET all tasks
 
-//router.use(requireAuth)
+router.use(requireAuth)
 
 router.get('/', getTasks)
 
