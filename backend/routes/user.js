@@ -4,12 +4,12 @@ const router = express.Router()
 
 //login route
 
-router.post("/login", loginUser)
+router.post("${REACT_APP_API_URL}/login", loginUser)
 
 
 //signup route
 
-router.post("/signup", signupUser)
+router.post("${REACT_APP_API_URL}/signup", signupUser)
 
 
 
