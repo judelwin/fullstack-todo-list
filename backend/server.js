@@ -7,7 +7,7 @@ import mongoose from "mongoose"
 dotenv.config()
 
 const corsOptions = {
-  origin: 'https://fullstack-todo-list-eight.vercel.app/', // Replace with your Vercel front-end URL
+  origin: 'https://fullstack-todo-list-eight.vercel.app', // Replace with your Vercel front-end URL
   methods: 'GET,PUT,PATCH,POST,DELETE',
   credentials: true,
 };
