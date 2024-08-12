@@ -3,7 +3,7 @@
 A full-stack To-Do List application built using the MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS).
 
 ## Live Demo
-
+Note: It may take 30 seconds to load the server up from inactivity. Thank you for your patience.
 Check out the live demo of the application [here](https://fullstack-todo-list-eight.vercel.app/).
 
 ## Features
