@@ -11,7 +11,7 @@ const Task = ({task}) => {
         if (!user){
             return
         }
-        const response = await fetch('${URL}/api/tasks/' + task._id, {
+        const response = await fetch(`${URL}/api/tasks/` + task._id, {
             method: "DELETE",
             headers: {
                 'Authorization': `Bearer ${user.token}`
